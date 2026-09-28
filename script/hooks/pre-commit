@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# pre-commit：提交前强制执行个人信息安全检查（仅暂存区）
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+exec bash "$ROOT/script/check_personal_info.sh" --staged

@@ -1,0 +1,9 @@
+# 个人信息规则模板（security/patterns.local.example）
+# 用法：复制为 security/patterns.local，再把占位内容替换为你的真实规则。
+# 格式：级别~规则名~是否忽略大小写（i 或 -）~扩展正则（ERE）
+# 级别：BLOCK = 处理后才能提交；WARN = 人工确认
+
+BLOCK~用户名~-~[[:<:]]占位用户名[[:>:]]
+BLOCK~姓名（拼音）~i~[[:<:]]占位拼音[[:>:]]
+BLOCK~姓名（中文）~-~占位姓名
+BLOCK~学校与单位~-~占位学校单位
